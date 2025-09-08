@@ -1,0 +1,25 @@
+name: "Deploy to Wiki"
+description: "Bearbeitet Wiki Seite via Puppeteer"
+author: "Karsten"
+runs:
+  using: "node12"
+  main: "index.js"
+branding:
+  icon: "upload-cloud"
+  color: "blue"
+inputs:
+  file:
+    description: "Pfad zur Eingabedatei"
+    required: true
+  page-title:
+    description: "Ziel-Seitentitel"
+    required: true
+  username:
+    description: "Bot Benutzername"
+    required: true
+  password:
+    description: "Bot Passwort"
+    required: true
+outputs:
+  updated:
+    description: "True wenn Edit erfolgreich"
